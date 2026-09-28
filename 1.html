@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Habit Tracker | Kaushal</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main class="container">
+            <header class="app-header">
+                <div>
+                    <p class="eyebrow">SMALL STEPS, BIG CHANGE</p>
+                    <h1>Habit Tracker<span class="title-sparkle" aria-hidden="true">✳</span></h1>
+                    <p id="month" class="date-label"></p>
+                </div>
+                <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch color theme"><span aria-hidden="true">◐</span></button>
+            </header>
+
+            <section class="stats-grid" aria-label="Habit statistics">
+                <article class="stat-card streak-card">
+                    <span class="stat-icon" aria-hidden="true">🔥</span>
+                    <div><p class="stat-label">Current streak</p><p class="stat-value"><span id="streakValue">0</span> <span class="stat-unit">days</span></p></div>
+                </article>
+                <article class="stat-card today-card">
+                    <span class="stat-icon" aria-hidden="true">✓</span>
+                    <div><p class="stat-label">Done today</p><p class="stat-value"><span id="todayValue">0/0</span></p></div>
+                </article>
+                <article class="stat-card total-card">
+                    <span class="stat-icon" aria-hidden="true">✦</span>
+                    <div><p class="stat-label">Your habits</p><p class="stat-value"><span id="habitCount">0</span></p></div>
+                </article>
+            </section>
+
+            <section class="progress-section" aria-labelledby="progressHeading">
+                <div class="progress-copy">
+                    <h2 id="progressHeading">Today's progress</h2>
+                    <p id="progressMessage">Every little win counts.</p>
+                </div>
+                <div class="progress-track"><div id="progress"></div></div>
+                <p id="progressText" aria-live="polite">0%</p>
+            </section>
+
+            <section class="week-section" aria-labelledby="weekHeading">
+                <div class="section-heading">
+                    <div><p class="eyebrow">YOUR MOMENTUM</p><h2 id="weekHeading">Last 7 days</h2></div>
+                    <span class="week-caption">A little better, day by day</span>
+                </div>
+                <div id="weekChart" class="week-chart" role="img" aria-label="Habit completion over the last seven days"></div>
+            </section>
+
+            <aside class="daily-tip" aria-label="Daily encouragement">
+                <span class="tip-icon" aria-hidden="true">✧</span>
+                <p id="dailyTip"></p>
+            </aside>
+
+            <section id="habitTable" aria-label="Your daily habits"></section>
+            <p class="storage-note">Your habits are saved in this browser.</p>
+            <div id="celebration" class="celebration" aria-hidden="true"></div>
+            <p id="liveMessage" class="visually-hidden" aria-live="polite"></p>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>
